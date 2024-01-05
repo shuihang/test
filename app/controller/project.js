@@ -12,6 +12,7 @@ class ProjectController extends Controller {
     // 拿到template表里的数据
     const data = await mongodb().query('template')
     // console.log(data)
+
     ctx.body = data;
   }
 }
