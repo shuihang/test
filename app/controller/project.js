@@ -13,7 +13,7 @@ class ProjectController extends Controller {
     const data = await mongodb().query('template')
     // console.log(data)
 
-    ctx.body = data;
+    ctx.body = data
   }
 }
 

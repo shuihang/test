@@ -11,7 +11,6 @@ class Mongo {
 
   connect() {
     return new Promise((resolve, reject) => {
-      console.log(111, this.url)
       MongoClient.connect(
         this.url,
         {
@@ -24,7 +23,7 @@ class Mongo {
             reject(err)
           } else {
             const db = client.db(this.dbName)
-            console.log(222, db)
+            // console.log(222, db)
             resolve({ db, client })
           }
         })
