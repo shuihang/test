@@ -11,7 +11,7 @@ RUN npm install
 
 
 # 启动
-CMD echo $SERVER_NAME && echo $AUTHOR_NAME && npm start
+CMD echo $SERVER_NAME && echo $AUTHOR_NAME && npm run dev
 
 # 环境变量
 ENV SERVER_NAME='my-server'
