@@ -21,7 +21,7 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v2
             - name: set ssh key # 临时设置 ssh key
               run: |
                   mkdir -p ~/.ssh/
