@@ -35,7 +35,7 @@ jobs:
                     # 然后 git clone https://github.com/shuihang/test.git -b dev （私有仓库，使用 github 用户名和密码）
                     # 记得删除 origin ，否则会暴露 github 密码
 
-                  cd /cjx-cli/test
+                  cd /cjx-cli-server/test
                  
             - name: delete ssh key # 删除 ssh key
               run: rm -rf ~/.ssh/id_rsa
