@@ -36,12 +36,12 @@ jobs:
                     # 记得删除 origin ，否则会暴露 github 密码
 
                     cd /home/xiejie/cjx-cli/cjx-cli-server/test;
-                    # git remote add origin https://github.com/shuihang/test.git
+                    git remote add origin https://shuihang:${{secrets.WFP_PASSWORD}}@github.com/shuihang/test.git
                     git checkout dev
                       # 重新下载最新代码
                     git pull origin dev
                       # 删除 origin ，否则会暴露 github 密码
-                    # git remote remove origin
+                    git remote remove origin
                       # 启动 docker
                       # 和 docker-compose.yml service 名字一致
                     docker-compose build test-server
