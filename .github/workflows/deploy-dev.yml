@@ -35,13 +35,13 @@ jobs:
                     # 然后 git clone https://github.com/shuihang/test.git -b dev （私有仓库，使用 github 用户名和密码）
                     # 记得删除 origin ，否则会暴露 github 密码
 
-                    cd /home/xiejie/cjx-cli/cjx-cli-server/test;
-                    git remote add origin https://github.com/shuihang/test.git;
-                    git checkout dev;
-                    git pull origin dev; # 重新下载最新代码
-                    git remote remove origin; # 删除 origin ，否则会暴露 github 密码
+                    cd /home/xiejie/cjx-cli/cjx-cli-server/test
+                    git remote add origin https://github.com/shuihang/test.git
+                    git checkout dev
+                    git pull origin dev # 重新下载最新代码
+                    git remote remove origin # 删除 origin ，否则会暴露 github 密码
                     # 启动 docker
-                    docker-compose build test-server; # 和 docker-compose.yml service 名字一致
-                    docker-compose up -d;
+                    docker-compose build test-server # 和 docker-compose.yml service 名字一致
+                    docker-compose up -d
             - name: delete ssh key # 删除 ssh key
               run: rm -rf ~/.ssh/id_rsa
