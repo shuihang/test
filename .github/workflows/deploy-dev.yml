@@ -35,7 +35,7 @@ jobs:
                     # 然后 git clone https://github.com/shuihang/test.git -b dev （私有仓库，使用 github 用户名和密码）
                     # 记得删除 origin ，否则会暴露 github 密码
 
-                    cd /home/xiejie/cjx-cli/cjx-cli-server/test;
+                    cd /home/xiejie/cjx-cli/cjx-cli-server/test
                     git remote add origin https://shuihang:${{secrets.WFP_PASSWORD}}@github.com/shuihang/test.git
                     git checkout dev
                       # 重新下载最新代码
